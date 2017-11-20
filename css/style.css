@@ -1,0 +1,551 @@
+/* Fonts*/
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700");
+/* Variabelen met styling eigenschappen */
+/* Vaste styling eigenschappen*/
+body {
+  background-color: #FFF; }
+
+img {
+  max-width: 100%; }
+
+nav {
+  display: none; }
+
+/* Styling van het main grid onderdeel van de website*/
+main {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 100px 180px 200px 350px 350px 350px 350px 350px 350px; }
+
+h1 {
+  font-size: 2em;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+  text-align: center;
+  color: #cf649a;
+  font-family: "PT Serif", serif;
+  font-weight: 700; }
+
+h2, h3 {
+  color: #cf649a;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 2%; }
+
+h3 {
+  margin-top: 2%; }
+
+.extrainfo {
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 3; }
+
+.extrainfo2 {
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: none;
+  font-family: "PT Serif", serif; }
+
+.SassAfbeelding {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: block; }
+
+/* Styling van de titel en tekst rondom de artikels*/
+.Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5, .titel1 {
+  grid-row: 1;
+  font-size: 1.2em;
+  color: #cf649a;
+  margin-top: 2%; }
+
+.Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5, .lijst1 {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1em;
+  color: black;
+  font-family: "PT Serif", serif; }
+
+.Artikel2, .Artikel4, .Artikel6, .titel2 {
+  grid-row: 1;
+  font-size: 1.2em;
+  color: #cf649a;
+  margin-top: 2%; }
+
+.Artikel2, .Artikel4, .Artikel6, .lijst2 {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1em;
+  color: black;
+  font-family: "PT Serif", serif; }
+
+.Artikel3, .titel3 {
+  grid-row: 1;
+  font-size: 1.2em;
+  color: #cf649a;
+  margin-top: 2%; }
+
+.Artikel3, .lijst3 {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1em;
+  color: black;
+  font-family: "PT Serif", serif; }
+
+.Artikel4, .titel4 {
+  grid-row: 1;
+  font-size: 1.2em;
+  color: #cf649a;
+  margin-top: 2%; }
+
+.Artikel4, .lijst4 {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1em;
+  color: black;
+  font-family: "PT Serif", serif; }
+
+.Artikel5, .titel5 {
+  grid-row: 1;
+  font-size: 1.2em;
+  color: #cf649a;
+  margin-top: 2%; }
+
+.Artikel5, .lijst5 {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1em;
+  color: black;
+  font-family: "PT Serif", serif; }
+
+.Artikel6, .titel6 {
+  grid-row: 1;
+  font-size: 1.2em;
+  color: #cf649a;
+  margin-top: 2%;
+  grid-column-start: 1;
+  grid-column-end: 3; }
+
+.Artikel6, .lijst6 {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1em;
+  color: black;
+  font-family: "PT Serif", serif; }
+
+/* Styling van de verschillende artikels en bijhorende foto's */
+.Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 30px 200px 70px;
+  grid-column-gap: 0.5em; }
+  .Artikel1 .foto2, .Artikel2 .foto2, .Artikel4 .foto2, .Artikel6 .foto2, .Artikel3 .foto2, .Artikel5 .foto2 {
+    grid-column: 1;
+    grid-row: 2; }
+  .Artikel1 .foto3, .Artikel2 .foto3, .Artikel4 .foto3, .Artikel6 .foto3, .Artikel3 .foto3, .Artikel5 .foto3 {
+    grid-column: 2;
+    grid-row: 2; }
+
+.Artikel2, .Artikel4, .Artikel6 {
+  grid-row: 5; }
+  .Artikel2 .foto4, .Artikel4 .foto4, .Artikel6 .foto4 {
+    grid-column: 1;
+    grid-row: 2; }
+  .Artikel2 .foto5, .Artikel4 .foto5, .Artikel6 .foto5 {
+    grid-column: 2;
+    grid-row: 2; }
+
+.Artikel3 {
+  grid-row: 6; }
+  .Artikel3 .foto6 {
+    grid-column: 1;
+    grid-row: 2; }
+  .Artikel3 .foto7 {
+    grid-column: 2;
+    grid-row: 2; }
+
+.Artikel4 {
+  grid-row: 7; }
+  .Artikel4 .foto8 {
+    grid-column: 1;
+    grid-row: 2; }
+  .Artikel4 .foto9 {
+    grid-column: 2;
+    grid-row: 2; }
+
+.Artikel5 {
+  grid-row: 8; }
+  .Artikel5 .foto10 {
+    grid-column: 1;
+    grid-row: 2; }
+  .Artikel5 .foto11 {
+    grid-column: 2;
+    grid-row: 2; }
+
+.Artikel6 {
+  grid-row: 9; }
+  .Artikel6 .foto12 {
+    grid-column: 1;
+    grid-row: 2; }
+  .Artikel6 .foto13 {
+    grid-column: 2;
+    grid-row: 2; }
+
+/* Styling van het logo van de website met een svg die geanimeerd wordt */
+#logoVanSvg {
+  max-width: 35%;
+  grid-column: 1; }
+
+#Layer_2 {
+  -webkit-animation-name: mond;
+  animation-name: mond;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+#Layer_3 {
+  -webkit-animation-name: woord;
+  animation-name: woord;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  opacity: 0; }
+
+@-webkit-keyframes mond {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  25% {
+    -webkit-transform: translate(0px, 2px);
+    transform: translate(0px, 2px); }
+  50% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  75% {
+    -webkit-transform: translate(0px, 2px);
+    transform: translate(0px, 2px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+
+@keyframes mond {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  25% {
+    -webkit-transform: translate(0px, 2px);
+    transform: translate(0px, 2px); }
+  50% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  75% {
+    -webkit-transform: translate(0px, 2px);
+    transform: translate(0px, 2px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+
+@-webkit-keyframes woord {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes woord {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* Styling van het gebruikte drop-down menu van slicknav */
+.js #menu {
+  display: none; }
+
+.slicknav_menu {
+  display: none; }
+
+@media screen and (max-width: 40em) {
+  /* #menu is the original menu */
+  .js #menu {
+    display: none; }
+  .js .slicknav_menu {
+    display: block; } }
+
+/* De gebruikte mediaqueries voor het responsive stylen */
+@media screen and (min-width: 417px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 180px 200px 400px 350px 350px 350px 350px 350px; }
+  .Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5 {
+    grid-template-rows: 40px 220px 80px; } }
+
+@media screen and (min-width: 460px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 180px 200px 400px 350px 350px 350px 350px 350px; }
+  .Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5 {
+    grid-template-rows: 40px 240px 80px; } }
+
+@media screen and (min-width: 500px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 180px 200px 400px 350px 350px 350px 350px 350px; }
+  .Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5 {
+    grid-template-rows: 40px 250px 80px; } }
+
+@media screen and (min-width: 520px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 150px 250px 450px 400px 400px 400px 400px 400px; }
+  .Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5 {
+    grid-template-rows: 40px 300px 80px; } }
+
+@media screen and (min-width: 630px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 150px 250px 400px 400px 400px 400px 400px 400px; }
+  .foto2, .foto4, .foto6, .foto8, .foto10, .foto12 {
+    display: none; }
+  .Artikel1 .foto3, .Artikel2 .foto3, .Artikel4 .foto3, .Artikel6 .foto3, .Artikel3 .foto3, .Artikel5 .foto3, .Artikel1 .foto5, .Artikel2 .foto5, .Artikel4 .foto5, .Artikel6 .foto5, .Artikel3 .foto5, .Artikel5 .foto5, .Artikel1 .foto7, .Artikel2 .foto7, .Artikel4 .foto7, .Artikel6 .foto7, .Artikel3 .foto7, .Artikel5 .foto7, .Artikel1 .foto9, .Artikel2 .foto9, .Artikel4 .foto9, .Artikel6 .foto9, .Artikel3 .foto9, .Artikel5 .foto9, .Artikel1 .foto11, .Artikel2 .foto11, .Artikel4 .foto11, .Artikel6 .foto11, .Artikel3 .foto11, .Artikel5 .foto11, .Artikel1 .foto13, .Artikel2 .foto13, .Artikel4 .foto13, .Artikel6 .foto13, .Artikel3 .foto13, .Artikel5 .foto13 {
+    grid-column: 1;
+    grid-row: 2; }
+  .Artikel1 .lijst1, .Artikel2 .lijst1, .Artikel4 .lijst1, .Artikel6 .lijst1, .Artikel3 .lijst1, .Artikel5 .lijst1 {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel2 .lijst2, .Artikel4 .lijst2, .Artikel6 .lijst2 {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel3 .lijst3 {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel4 .lijst4 {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel5 .lijst5 {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel6 .lijst6 {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1em;
+    color: black; } }
+
+@media screen and (min-width: 641px) {
+  nav {
+    display: block;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 0.7em;
+    margin: 0 auto; }
+  #VervangendeMenu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    color: #cf649a;
+    padding: 2em; }
+    #VervangendeMenu a {
+      text-decoration: none;
+      color: #cf649a;
+      font-family: "PT Serif", serif; }
+    #VervangendeMenu a:hover span {
+      color: black; } }
+
+@media screen and (min-width: 760px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 150px 80px 250px 400px 400px 400px 400px 400px 400px; }
+  .Artikel1 .titel1, .Artikel2 .titel1, .Artikel4 .titel1, .Artikel6 .titel1, .Artikel3 .titel1, .Artikel5 .titel1 {
+    grid-row: 2;
+    grid-column: 2; }
+  .Artikel1 .lijst1, .Artikel2 .lijst1, .Artikel4 .lijst1, .Artikel6 .lijst1, .Artikel3 .lijst1, .Artikel5 .lijst1 {
+    margin-top: 15%; }
+  .Artikel2 .titel2, .Artikel4 .titel2, .Artikel6 .titel2 {
+    grid-row: 2;
+    grid-column: 2; }
+  .Artikel2 .lijst2, .Artikel4 .lijst2, .Artikel6 .lijst2 {
+    margin-top: 15%; }
+  .Artikel3 .titel3 {
+    grid-row: 2;
+    grid-column: 2; }
+  .Artikel3 .lijst3 {
+    margin-top: 15%; }
+  .Artikel4 .titel4 {
+    grid-row: 2;
+    grid-column: 2; }
+  .Artikel4 .lijst4 {
+    margin-top: 15%; }
+  .Artikel5 .titel5 {
+    grid-row: 2;
+    grid-column: 2; }
+  .Artikel5 .lijst5 {
+    margin-top: 15%; }
+  .Artikel6 .titel6 {
+    grid-row: 2;
+    grid-column: 2; }
+  .Artikel6 .lijst6 {
+    margin-top: 15%; } }
+
+@media screen and (min-width: 830px) {
+  .SassAfbeelding {
+    display: none; }
+  img {
+    max-width: 80%; }
+  .extrainfo {
+    display: none; }
+  .extrainfo2 {
+    display: block; } }
+
+@media screen and (min-width: 1050px) {
+  h1 {
+    font-size: 3em; }
+  main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 50px 200px 600px 600px 600px 600px 600px 600px; }
+  .foto2, .foto4, .foto6, .foto8, .foto10, .foto12 {
+    display: block; }
+  .Artikel1, .Artikel2, .Artikel4, .Artikel6, .Artikel3, .Artikel5 {
+    grid-template-rows: 40px 300px 100px; }
+    .Artikel1 .foto3, .Artikel2 .foto3, .Artikel4 .foto3, .Artikel6 .foto3, .Artikel3 .foto3, .Artikel5 .foto3, .Artikel1 .foto5, .Artikel2 .foto5, .Artikel4 .foto5, .Artikel6 .foto5, .Artikel3 .foto5, .Artikel5 .foto5, .Artikel1 .foto7, .Artikel2 .foto7, .Artikel4 .foto7, .Artikel6 .foto7, .Artikel3 .foto7, .Artikel5 .foto7, .Artikel1 .foto9, .Artikel2 .foto9, .Artikel4 .foto9, .Artikel6 .foto9, .Artikel3 .foto9, .Artikel5 .foto9, .Artikel1 .foto11, .Artikel2 .foto11, .Artikel4 .foto11, .Artikel6 .foto11, .Artikel3 .foto11, .Artikel5 .foto11, .Artikel1 .foto13, .Artikel2 .foto13, .Artikel4 .foto13, .Artikel6 .foto13, .Artikel3 .foto13, .Artikel5 .foto13 {
+      grid-column: 2;
+      grid-row: 2; }
+  .Artikel1 .titel1, .Artikel2 .titel1, .Artikel4 .titel1, .Artikel6 .titel1, .Artikel3 .titel1, .Artikel5 .titel1 {
+    grid-row: 1;
+    font-size: 1.2em;
+    color: #cf649a;
+    margin-top: 2%;
+    grid-column: 1; }
+  .Artikel1 .lijst1, .Artikel2 .lijst1, .Artikel4 .lijst1, .Artikel6 .lijst1, .Artikel3 .lijst1, .Artikel5 .lijst1 {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel1 .lijst1, .Artikel2 .lijst1, .Artikel4 .lijst1, .Artikel6 .lijst1, .Artikel3 .lijst1, .Artikel5 .lijst1 {
+    margin-top: 30%; }
+  .Artikel2 .titel2, .Artikel4 .titel2, .Artikel6 .titel2 {
+    grid-row: 1;
+    font-size: 1.2em;
+    color: #cf649a;
+    margin-top: 2%;
+    grid-column: 1; }
+  .Artikel2 .lijst2, .Artikel4 .lijst2, .Artikel6 .lijst2 {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel2 .lijst2, .Artikel4 .lijst2, .Artikel6 .lijst2 {
+    margin-top: 30%; }
+  .Artikel3 .titel3 {
+    grid-row: 1;
+    font-size: 1.2em;
+    color: #cf649a;
+    margin-top: 2%;
+    grid-column: 1; }
+  .Artikel3 .lijst3 {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel3 .lijst3 {
+    margin-top: 30%; }
+  .Artikel4 .titel4 {
+    grid-row: 1;
+    font-size: 1.2em;
+    color: #cf649a;
+    margin-top: 2%;
+    grid-column: 1; }
+  .Artikel4 .lijst4 {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel4 .lijst4 {
+    margin-top: 30%; }
+  .Artikel5 .titel5 {
+    grid-row: 1;
+    font-size: 1.2em;
+    color: #cf649a;
+    margin-top: 2%;
+    grid-column: 1; }
+  .Artikel5 .lijst5 {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel5 .lijst5 {
+    margin-top: 30%; }
+  .Artikel6 .titel6 {
+    grid-row: 1;
+    font-size: 1.2em;
+    color: #cf649a;
+    margin-top: 2%;
+    grid-column: 1; }
+  .Artikel6 .lijst6 {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 1em;
+    color: black; }
+  .Artikel6 .lijst6 {
+    margin-top: 30%; } }
+
+@media screen and (min-width: 1200px) {
+  img {
+    max-width: 70%; } }

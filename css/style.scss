@@ -1,0 +1,645 @@
+/* Fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+
+/* Variabelen met styling eigenschappen */
+
+$mijnKleur : rgb(207,100,154);
+$mijnAndereKleur: black;
+$wit: #FFF;
+$fontMain:  'PT Serif', serif;
+$fontTitel: 'PT Serif' ,serif;
+
+@mixin lijstStyling {
+  grid-row: 3;
+  grid-column-start:1;
+  grid-column-end:3;
+  font-size: 1em;
+  color:$mijnAndereKleur;
+}
+@mixin lijstStylingMedia{
+
+  grid-row: 2;
+  grid-column: 2;
+  font-size: 1em;
+  color:$mijnAndereKleur;
+}
+@mixin lijstStylingGrootScherm{
+  grid-row: 3;
+  grid-column-start:1;
+  grid-column-end:2;
+  font-size: 1em;
+  color:$mijnAndereKleur;
+}
+@mixin titelStyling {
+  grid-row: 1;
+  font-size: 1.2em;
+  color:$mijnKleur;
+  margin-top:2%;
+}
+@mixin titelStylingMedia{
+  grid-row:2;
+  grid-column: 2;
+}
+
+/* Vaste styling eigenschappen*/
+
+body{
+  background-color: $wit;
+}
+img {
+  max-width: 100%;
+}
+nav{
+  display: none;
+}
+
+/* Styling van het main grid onderdeel van de website*/
+
+
+
+
+main{
+width: 90%;
+margin: 0 auto;
+display:grid;
+grid-template-columns: repeat(2,50%);
+grid-template-rows: 100px 180px 200px 350px 350px 350px 350px 350px 350px;
+}
+h1 {
+  font-size: 2em;
+  grid-column-start: 1;
+  grid-column-end:3;
+  grid-row: 1;
+  text-align: center;
+  color:$mijnKleur;
+  font-family: $fontTitel;
+  font-weight: 700;
+}
+h2{
+  color:$mijnKleur;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+h3{
+  @extend h2;
+  margin-top: 2%;
+}
+.extrainfo{
+grid-row:2;
+grid-column-start: 1;
+grid-column-end: 3;
+}
+.extrainfo2{
+grid-row:2;
+grid-column-start: 1;
+grid-column-end: 3;
+display: none;
+font-family: $fontMain;
+}
+.SassAfbeelding{
+  grid-row: 3;
+  grid-column-start:1;
+  grid-column-end:3;
+  display: block;
+}
+
+
+
+
+/* Styling van de titel en tekst rondom de artikels*/
+
+
+
+ .Artikel1 , .titel1{
+  @include titelStyling;
+}
+.Artikel1 , .lijst1{
+  @include lijstStyling;
+  font-family: $fontMain;
+}
+.Artikel2 , .titel2{
+@include titelStyling;
+}
+.Artikel2, .lijst2{
+  @include lijstStyling;
+  font-family: $fontMain;
+}
+.Artikel3 , .titel3{
+ @include titelStyling;
+}
+.Artikel3, .lijst3{
+  @include lijstStyling;
+  font-family: $fontMain;
+}
+.Artikel4 , .titel4{
+ @include titelStyling;
+}
+.Artikel4 , .lijst4{
+  @include lijstStyling;
+  font-family: $fontMain;
+}
+.Artikel5 , .titel5 {
+ @include titelStyling;
+}
+.Artikel5 , .lijst5{
+  @include lijstStyling;
+  font-family: $fontMain;
+}
+.Artikel6 , .titel6{
+ @include titelStyling;
+ grid-column-start: 1;
+ grid-column-end: 3;
+}
+.Artikel6 , .lijst6{
+  @include lijstStyling;
+  font-family: $fontMain;
+}
+
+
+/* Styling van de verschillende artikels en bijhorende foto's */
+
+
+
+.Artikel1{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row:4;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 30px 200px 70px;
+  grid-column-gap: 0.5em;
+  .foto2{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .foto3{
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+.Artikel2{
+  @extend .Artikel1;
+  grid-row:5;
+  .foto4{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .foto5{
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+.Artikel3{
+  @extend .Artikel1;
+  grid-row:6;
+  .foto6{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .foto7{
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+.Artikel4{
+  @extend .Artikel2;
+  grid-row:7;
+  .foto8{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .foto9{
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+.Artikel5{
+  @extend .Artikel1;
+  grid-row: 8;
+  .foto10{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .foto11{
+  grid-column: 2;
+  grid-row: 2;
+  }
+}
+.Artikel6{
+  @extend .Artikel2;
+  grid-row:9;
+  .foto12{
+    grid-column: 1;
+  grid-row: 2;
+  }
+  .foto13{
+    grid-column: 2;
+  grid-row: 2;
+  }
+}
+
+
+
+
+
+/* Styling van het logo van de website met een svg die geanimeerd wordt */
+#logoVanSvg{
+      max-width:35%;
+      grid-column:1;
+
+
+}
+#Layer_2{
+      animation-name:mond;
+      animation-duration:2s;
+      animation-iteration-count: infinite;
+
+}
+#Layer_3{
+      animation-name:woord;
+      animation-duration:4s;
+      animation-iteration-count:1;
+      opacity:0;
+}
+@keyframes mond{
+      0%{
+          transform:translate(0px,0px);
+      }
+      25%{
+            transform:translate(0px,2px);
+      }
+      50%{
+            transform:translate(0px,0px);
+
+      }
+      75%{
+            transform:translate(0px,2px);
+      }
+      100%{
+            transform:translate(0px,0px);
+      }
+
+}
+@keyframes woord {
+      0%{
+           opacity:1;
+      }
+      100%{
+            opacity:0;
+
+      }
+}
+
+
+
+/* Styling van het gebruikte drop-down menu van slicknav */
+
+
+.js #menu {
+  display:none;
+}
+
+.slicknav_menu {
+	display:none;
+}
+
+@media screen and (max-width: 40em) {
+	/* #menu is the original menu */
+	.js #menu {
+		display:none;
+	}
+
+	.js .slicknav_menu {
+		display:block;
+	}
+}
+
+
+
+
+
+
+
+
+/* De gebruikte mediaqueries voor het responsive stylen */
+
+
+@media screen and (min-width:417px) {
+  main{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 100px 180px 200px 400px 350px 350px 350px 350px 350px;
+  }
+  .Artikel1{
+    grid-template-rows: 40px 220px 80px;
+  }
+}
+
+
+
+
+
+@media screen and (min-width:460px) {
+  main{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 100px 180px 200px 400px 350px 350px 350px 350px 350px;
+  }
+  .Artikel1{
+    grid-template-rows: 40px 240px 80px;
+  }
+}
+
+
+
+
+
+@media screen and (min-width:500px) {
+  main{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 100px 180px 200px 400px 350px 350px 350px 350px 350px;
+  }
+  .Artikel1{
+    grid-template-rows: 40px 250px 80px;
+  }
+}
+
+
+
+
+@media screen and (min-width:520px) {
+  main{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 100px 150px 250px 450px 400px 400px 400px 400px 400px;
+  }
+  .Artikel1{
+    grid-template-rows: 40px 300px 80px;
+  }
+}
+
+
+
+
+
+@media screen and (min-width:630px) {
+
+  main{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 100px 150px 250px 400px 400px 400px 400px 400px 400px;
+  }
+  .foto2,.foto4,.foto6,.foto8,.foto10,.foto12{
+    display: none;
+  }
+  .Artikel1{
+    .foto3,.foto5,.foto7,.foto9,.foto11,.foto13{
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+  .Artikel1 .lijst1{
+  @include lijstStylingMedia;
+  }
+.Artikel2 .lijst2{
+  @include lijstStylingMedia;
+}
+.Artikel3 .lijst3{
+  @include lijstStylingMedia;
+}
+.Artikel4 .lijst4{
+  @include lijstStylingMedia;
+}
+.Artikel5 .lijst5{
+  @include lijstStylingMedia;
+}
+.Artikel6 .lijst6{
+  @include lijstStylingMedia;
+}
+}
+
+
+
+
+
+
+
+@media screen and (min-width:641px) {
+nav {
+  display: block;
+  justify-content: space-between;
+  width: 80%;
+  font-size: 0.7em;
+  margin: 0 auto;
+}
+#VervangendeMenu{
+  display: flex;
+  justify-content: space-around;
+  color:$mijnKleur;
+  padding: 2em;
+  a{
+    text-decoration: none;
+    color:$mijnKleur;
+    font-family: $fontMain;
+  }
+  a:hover{
+    span{
+      color:black;
+  }
+}
+}
+
+}
+
+
+
+
+
+
+@media screen and (min-width:760px) {
+  main{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 150px 80px 250px 400px 400px 400px 400px 400px 400px;
+  }
+
+.Artikel1 .titel1 {
+  @include titelStylingMedia;
+}
+.Artikel1 .lijst1{
+  margin-top: 15%;
+}
+.Artikel2 .titel2 {
+  @include titelStylingMedia;
+}
+.Artikel2 .lijst2{
+  margin-top: 15%;
+}
+.Artikel3 .titel3 {
+  @include titelStylingMedia;
+}
+.Artikel3 .lijst3{
+  margin-top: 15%;
+}
+.Artikel4 .titel4 {
+  @include titelStylingMedia;
+}
+.Artikel4 .lijst4{
+  margin-top: 15%;
+}
+.Artikel5 .titel5 {
+  @include titelStylingMedia;
+}
+.Artikel5 .lijst5{
+  margin-top: 15%;
+}
+.Artikel6 .titel6 {
+  @include titelStylingMedia;
+}
+.Artikel6 .lijst6{
+  margin-top: 15%;
+}
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:830px) {
+  .SassAfbeelding{
+    display: none;
+  }
+  img{
+    max-width: 80%;
+  }
+.extrainfo{
+  display: none;
+}
+.extrainfo2{
+  display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1050px) {
+h1{
+  font-size: 3em;
+}
+main{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: 100px 50px 200px 600px 600px 600px 600px 600px 600px;
+  }
+  .foto2,.foto4,.foto6,.foto8,.foto10,.foto12{
+    display: block;
+  }
+  .Artikel1{
+        grid-template-rows: 40px 300px 100px;
+
+        .foto3,.foto5,.foto7,.foto9,.foto11,.foto13{
+              grid-column: 2;
+              grid-row: 2;
+    }
+  }
+.Artikel1 .titel1{
+  @include titelStyling;
+  grid-column: 1;
+}
+.Artikel1 .lijst1{
+  @include lijstStylingGrootScherm;
+}
+.Artikel1 .lijst1{
+  margin-top: 30%;
+}
+.Artikel2 .titel2{
+  @include titelStyling;
+  grid-column: 1;
+}
+.Artikel2 .lijst2{
+  @include lijstStylingGrootScherm;
+}
+.Artikel2 .lijst2{
+  margin-top: 30%;
+}
+.Artikel3 .titel3{
+  @include titelStyling;
+  grid-column: 1;
+}
+.Artikel3 .lijst3{
+  @include lijstStylingGrootScherm;
+}
+.Artikel3 .lijst3{
+  margin-top: 30%;
+}
+.Artikel4 .titel4{
+  @include titelStyling;
+  grid-column: 1;
+}
+.Artikel4 .lijst4{
+  @include lijstStylingGrootScherm;
+}
+.Artikel4 .lijst4{
+  margin-top: 30%;
+}
+.Artikel5 .titel5{
+  @include titelStyling;
+  grid-column: 1;
+}
+.Artikel5 .lijst5{
+  @include lijstStylingGrootScherm;
+}
+.Artikel5 .lijst5{
+  margin-top: 30%;
+}
+.Artikel6 .titel6{
+  @include titelStyling;
+  grid-column: 1;
+}
+.Artikel6 .lijst6{
+  @include lijstStylingGrootScherm;
+}
+.Artikel6 .lijst6{
+  margin-top: 30%;
+}
+}
+
+
+
+
+
+
+
+@media screen and (min-width:1200px) {
+img{
+  max-width: 70%;
+}
+
+}
